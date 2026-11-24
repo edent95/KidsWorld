@@ -1,0 +1,13 @@
+{
+  "name": "kidsworld",
+  "private": true,
+  "description": "小乐儿园地 Kids World Kindergarten website (static, GitHub Pages)",
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/append-log.mjs --check && node scripts/check-site.mjs",
+    "icons": "node scripts/icons.mjs",
+    "log:append": "node scripts/append-log.mjs",
+    "log:check": "node scripts/append-log.mjs --check",
+    "log:home": "node scripts/build-home.mjs"
+  }
+}
