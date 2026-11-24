@@ -36,19 +36,19 @@
 :root{
   --bg:#F4EDDD; --paper:#FFFBF1; --ink:#1B2A4A; --muted:#5A6378; --line:rgba(27,42,74,.14);
   --red:#C8282B; --red-text:#A81E22; --green:#2E7D3A; --green-d:#1F5A29; --clay:#C8794A; --gold:#E8B23A;
-  --board:#16382A; --led:#FFC94A; --pink:#E8197A;
+  --board:#16382A; --led:#FFC94A; --pink:#E8197A; --teal:#0E7C86; --on-teal:#FFFFFF;
   --shadow:0 10px 0 rgba(27,42,74,.08), 0 22px 44px rgba(27,42,74,.12);
   color-scheme:light;
 }
 :root[data-theme=dark]{color-scheme:dark;
   --bg:#0D182D; --paper:#15243F; --ink:#F4EDDD; --muted:#AAB4CA; --line:rgba(244,237,221,.14);
   --red:#F0484B; --red-text:#FF7A7C; --green:#4FAE5E; --green-d:#2E7D3A; --clay:#D98C5C; --gold:#F2C14E;
-  --board:#0A2219; --led:#FFD866; --shadow:0 10px 0 rgba(0,0,0,.3), 0 22px 44px rgba(0,0,0,.4);
+  --board:#0A2219; --led:#FFD866; --teal:#3CC8C8; --on-teal:#0D182D; --shadow:0 10px 0 rgba(0,0,0,.3), 0 22px 44px rgba(0,0,0,.4);
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme]){color-scheme:dark;
   --bg:#0D182D; --paper:#15243F; --ink:#F4EDDD; --muted:#AAB4CA; --line:rgba(244,237,221,.14);
   --red:#F0484B; --red-text:#FF7A7C; --green:#4FAE5E; --green-d:#2E7D3A; --clay:#D98C5C; --gold:#F2C14E;
-  --board:#0A2219; --led:#FFD866; --shadow:0 10px 0 rgba(0,0,0,.3), 0 22px 44px rgba(0,0,0,.4)}}
+  --board:#0A2219; --led:#FFD866; --teal:#3CC8C8; --on-teal:#0D182D; --shadow:0 10px 0 rgba(0,0,0,.3), 0 22px 44px rgba(0,0,0,.4)}}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -127,6 +127,8 @@ img{max-width:100%;height:auto;display:block}
 .btn-red{background:var(--red);color:#fff;box-shadow:0 5px 0 color-mix(in srgb,var(--red) 60%,#000)}
 :root[data-theme=dark] .btn-red{color:#14080A}
 .btn-ink{background:var(--ink);color:var(--paper);box-shadow:0 5px 0 color-mix(in srgb,var(--ink) 55%,#000)}
+.btn-teal{background:var(--teal);color:var(--on-teal);box-shadow:0 5px 0 color-mix(in srgb,var(--teal) 60%,#000)}
+.btn .pin{color:var(--red)}
 .btn-line{background:var(--paper);color:var(--ink);box-shadow:inset 0 0 0 2px var(--line),0 5px 0 var(--line)}
 .copied{font-size:14px;font-weight:630;color:var(--green);min-height:1.4em;text-align:center;margin-top:8px}
 
@@ -244,8 +246,8 @@ footer img{width:180px;margin:0 auto 10px}
   <div class="actions">
     <a class="btn btn-ink" id="gcalBtn" href="#" target="_blank" rel="noopener">Google 日历</a>
     <a class="btn btn-line" href="#venue">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>怎么去 Directions</a>
-    <a class="btn btn-line" id="waBtn" href="#" target="_blank" rel="noopener">
+      <svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>怎么去 Directions</a>
+    <a class="btn btn-teal" id="waBtn" href="#" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7Z"/></svg>WhatsApp 分享</a>
   </div>
 </header>
