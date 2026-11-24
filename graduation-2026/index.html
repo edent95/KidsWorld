@@ -242,8 +242,6 @@ footer img{width:180px;margin:0 auto 10px}
   </article>
 
   <div class="actions">
-    <a class="btn btn-red" id="calBtn" href="#" download="kidsworld-graduation-2026.ics">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>加入日历 Add to calendar</a>
     <a class="btn btn-ink" id="gcalBtn" href="#" target="_blank" rel="noopener">Google 日历</a>
     <a class="btn btn-line" href="#venue">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>怎么去 Directions</a>
@@ -341,13 +339,8 @@ const root = document.documentElement;
  paint();
  btn.addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('kw-theme',root.dataset.theme)}catch(e){}paint()});})();
 
-// calendar: .ics file + Google Calendar link
+// Google Calendar link + WhatsApp share
 (()=>{const z=d=>d.toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,'');
- const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Kids World Kindergarten//Graduation 2026//EN','BEGIN:VEVENT',
-  'UID:kidsworld-graduation-2026@kidsworld-penang.com','DTSTAMP:'+z(new Date()),'DTSTART:'+z(EVENT_START),'DTEND:'+z(EVENT_END),
-  'SUMMARY:'+TITLE,'LOCATION:'+PLACE.replace(/,/g,'\\,'),'DESCRIPTION:小朋友舞蹈表演 · Dances by our children. https://kidsworld-penang.com/graduation-2026/',
-  'BEGIN:VALARM','TRIGGER:-P1D','ACTION:DISPLAY','DESCRIPTION:明天晚上7时 毕业典礼暨游艺会','END:VALARM','END:VEVENT','END:VCALENDAR'].join('\r\n');
- document.getElementById('calBtn').href='data:text/calendar;charset=utf-8,'+encodeURIComponent(ics);
  const g=new URL('https://calendar.google.com/calendar/render');
  g.searchParams.set('action','TEMPLATE');g.searchParams.set('text',TITLE);g.searchParams.set('dates',z(EVENT_START)+'/'+z(EVENT_END));
  g.searchParams.set('location',PLACE);g.searchParams.set('details','小朋友舞蹈表演 · Dances by our children\nhttps://kidsworld-penang.com/graduation-2026/');
