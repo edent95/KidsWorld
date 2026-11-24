@@ -1,0 +1,7 @@
+{
+  "_comment": "scripts/wt.mjs preview 读这份:纯静态站,在 worktree 根目录起一个只监听本机的静态服务。端口现取空闲的。",
+  "url": "http://127.0.0.1:{port}/",
+  "procs": [
+    { "cwd": ".", "argv": ["python3", "-m", "http.server", "{port}", "--bind", "127.0.0.1"] }
+  ]
+}

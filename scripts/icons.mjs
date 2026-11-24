@@ -1,7 +1,7 @@
 // 黄金圆图标 · 极简画法(同 personal-dashboard client/src/lib/goldenIcons.ts 的规则)
 // - 24 格;辅助线 G1 = 24/φ²、G2 = 24/φ;所有半径只取 R(k) = 9·φ⁻ᵏ;只用直线和圆弧,不用贝塞尔。
 // - 骨架一律 1px 细线(跟文字同色、淡一层),每个图标只有一个彩色焦点(颜色取 CSS 变量 --f)。
-// 用法:node scripts/icons.mjs  → 把 <symbol> 写进 index.html 的 <!--icons:start--> … <!--icons:end--> 之间。
+// 用法:node scripts/icons.mjs  → 把 <symbol> 写进 index.html 与 design/index.html 的 <!--icons:start--> … <!--icons:end--> 之间。
 import { readFileSync, writeFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 
@@ -64,14 +64,25 @@ const ICONS = {
   phone: rect(7, 2.5, 10, 19, R3) + m(`M${n(G1 + 1)} 5 H${n(G2 - 1)}`) + focus([12, 18.5], R4 + 0.3),
   // 钟:表盘 R0,分针 R1、时针 R2(同面板 now);焦点 = 轴心
   clock: circle(C, R0) + m(`M12 12 V${n(12 - R1)} M12 12 H${n(12 + R2)}`) + focus(C, R3),
+  // 月亮:外圆 R0 被圆心偏到右上、半径 R1 的圆咬掉一口(两圆交点精确算出);焦点 = 缺口里的一颗星
+  moon: (() => {
+    const c2 = [12 + R2 + 1, 12 - R2 - 1]
+    const dx = c2[0] - 12, dy = c2[1] - 12, d = Math.hypot(dx, dy)
+    const x = (d * d + R0 * R0 - R1 * R1) / (2 * d), h = Math.sqrt(R0 * R0 - x * x)
+    const mx = 12 + (dx * x) / d, my = 12 + (dy * x) / d
+    const i1 = [mx + (dy * h) / d, my - (dx * h) / d], i2 = [mx - (dy * h) / d, my + (dx * h) / d]
+    return m(`M${P(i1)} ${A(R0, i2, 0, 1)} ${A(R1, i1, 1, 0)} Z`) + focus([c2[0] + R4, c2[1] - R4], R3)
+  })(),
   // 聊天(Facebook 私讯):对话泡 + 一道折线闪电
   chat: circle([12, 11.5], R0) + m(`M${n(12 - R0 * 0.62)} ${n(11.5 + R0 * 0.78)} L6.5 21 L${n(12 - R0 * 0.2)} ${n(11.5 + R0 * 0.98)} M7.5 13.5 L10.5 10 L13 12.5 L16.5 9.5`) + focus([16.5, 9.5], R4 + 0.3),
 }
 
 const symbols = Object.entries(ICONS).map(([id, body]) => `  <symbol id="i-${id}" viewBox="0 0 24 24">${body}</symbol>`).join('\n')
-const file = fileURLToPath(new URL('../index.html', import.meta.url))
-const html = readFileSync(file, 'utf8')
 const re = /<!--icons:start-->[\s\S]*?<!--icons:end-->/
-if (!re.test(html)) throw new Error('index.html 缺少 <!--icons:start--> … <!--icons:end--> 标记')
-writeFileSync(file, html.replace(re, `<!--icons:start-->\n${symbols}\n  <!--icons:end-->`))
-console.log(`wrote ${Object.keys(ICONS).length} icons`)
+for (const page of ['../index.html', '../design/index.html']) {
+  const file = fileURLToPath(new URL(page, import.meta.url))
+  const html = readFileSync(file, 'utf8')
+  if (!re.test(html)) throw new Error(`${page} 缺少 <!--icons:start--> … <!--icons:end--> 标记`)
+  writeFileSync(file, html.replace(re, `<!--icons:start-->\n${symbols}\n  <!--icons:end-->`))
+}
+console.log(`wrote ${Object.keys(ICONS).length} icons into 2 pages`)

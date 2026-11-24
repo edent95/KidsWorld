@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>品牌规范 · 小乐儿园地 Kids World</title>
+<meta name="description" content="小乐儿园地 Kids World Kindergarten 品牌规范:logo、颜色、字体、图标、组件与照片的用法。Brand guidelines.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FFF7FA">
+<link rel="icon" type="image/png" href="../assets/favicon.png?v=3">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<script>
+  (()=>{let t=new URLSearchParams(location.search).get('theme');if(t!=='light'&&t!=='dark'){try{t=localStorage.getItem('kw-theme')}catch(e){}}
+   if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+   document.documentElement.dataset.theme=t})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+<style>
+/* 品牌规范页:令牌与网站 index.html 同一套,另加「文字专用」深色版(-text)与 action 按钮色 */
+:root{
+  --pink:#E8197A; --grape:#8B45D6; --sky:#1E9FE6; --cocoa:#5A2E1A; --grass:#5DB82E; --sun:#FFC22E;
+  --bg:#FFF7FA; --surface:#FFFFFF; --ink:#3A2117; --muted:#7A6258; --ink-on-sun:#3A2117;
+  --pink-soft:#FFE3EF; --grape-soft:#F0E6FD; --sky-soft:#DDF1FD; --grass-soft:#E5F6DA; --sun-soft:#FFF3CF;
+  --pink-text:#C2105F; --grape-text:#7A3BC4; --sky-text:#0B6FA8; --grass-text:#367016; --sun-text:#8A6200;
+  --action:#D1146F; --action-shadow:#A50E57; --on-action:#FFFFFF;
+  --line:color-mix(in srgb,var(--ink) 10%,transparent);
+  --radius:28px; --shadow:0 8px 0 rgba(90,46,26,.07), 0 18px 40px rgba(90,46,26,.10);
+  --max:1100px; color-scheme:light;
+}
+:root[data-theme=dark]{color-scheme:dark;
+  --cocoa:#E8B796;
+  --bg:#1D1420; --surface:#2A1E2E; --ink:#FBF1F5; --muted:#C7B5BE;
+  --pink-soft:#46203A; --grape-soft:#33244B; --sky-soft:#1B3550; --grass-soft:#22381B; --sun-soft:#3E3320;
+  --pink-text:#FF5FA8; --grape-text:#B98AF0; --sky-text:#5CC0F5; --grass-text:#8BD45F; --sun-text:#F2C14E;
+  --action:#FF5FA8; --action-shadow:#C2105F; --on-action:#1D1420;
+  --shadow:0 8px 0 rgba(0,0,0,.25), 0 18px 40px rgba(0,0,0,.35);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme]){color-scheme:dark;
+  --cocoa:#E8B796; --bg:#1D1420; --surface:#2A1E2E; --ink:#FBF1F5; --muted:#C7B5BE;
+  --pink-soft:#46203A; --grape-soft:#33244B; --sky-soft:#1B3550; --grass-soft:#22381B; --sun-soft:#3E3320;
+  --pink-text:#FF5FA8; --grape-text:#B98AF0; --sky-text:#5CC0F5; --grass-text:#8BD45F; --sun-text:#F2C14E;
+  --action:#FF5FA8; --action-shadow:#C2105F; --on-action:#1D1420; --shadow:0 8px 0 rgba(0,0,0,.25), 0 18px 40px rgba(0,0,0,.35)}}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.7 Nunito,"PingFang SC","Noto Sans SC",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Baloo 2","ZCOOL KuaiLe",Nunito,sans-serif;line-height:1.12;margin:0;font-weight:800;text-wrap:balance}
+.cn{font-family:"ZCOOL KuaiLe","PingFang SC",sans-serif;font-weight:400}
+a{color:inherit}
+img{max-width:100%;height:auto;display:block}
+code{font:700 .86em ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--pink-soft);color:var(--pink-text);padding:1px 6px;border-radius:6px}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(22px,env(safe-area-inset-left,0px));padding-right:max(22px,env(safe-area-inset-right,0px))}
+.ico{width:1.25em;height:1.25em;flex:none;display:inline-block;vertical-align:-.25em;--f:var(--pink)}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{height:56px;width:auto}
+.brand b{display:block;font:400 20px/1 "ZCOOL KuaiLe";letter-spacing:.04em}
+.brand small{display:block;font:800 12px "Baloo 2";color:var(--muted);letter-spacing:.06em;margin-top:4px}
+.nav-end{display:flex;align-items:center;gap:10px}
+.back{font-weight:800;text-decoration:none;padding:10px 16px;border-radius:99px;background:var(--surface);box-shadow:0 4px 0 var(--line)}
+.back:hover{background:var(--pink-soft)}
+.theme-btn{width:44px;height:44px;border-radius:50%;border:0;background:var(--surface);color:var(--ink);box-shadow:0 4px 0 var(--line);display:grid;place-items:center;cursor:pointer}
+.theme-btn .ico{width:24px;height:24px;--f:var(--sun)}
+.theme-btn .i-sun{display:none}
+:root[data-theme=dark] .theme-btn .i-sun{display:block}
+:root[data-theme=dark] .theme-btn .i-moon{display:none}
+@media (max-width:520px){.back span{display:none}}
+
+/* layout: sticky table of contents + sections */
+.layout{display:grid;grid-template-columns:200px minmax(0,1fr);gap:48px;padding-block:40px 80px}
+.toc{position:sticky;top:100px;align-self:start;font-weight:700;font-size:15px}
+.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+.toc a{display:flex;gap:10px;text-decoration:none;padding:7px 12px;border-radius:12px;color:var(--muted)}
+.toc a::before{counter-increment:t;content:counter(t,decimal-leading-zero);font:800 12px/2 "Baloo 2";color:var(--pink-text)}
+.toc a:hover,.toc a.on{background:var(--surface);color:var(--ink)}
+@media (max-width:900px){.layout{grid-template-columns:1fr;gap:0}.toc{display:none}}
+
+.intro{padding:20px 0 40px;border-bottom:1px dashed var(--line);margin-bottom:24px}
+.eyebrow{display:inline-block;font:800 13px/1.4 Nunito;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:99px;background:var(--pink-soft);color:var(--pink-text)}
+.intro h1{font-size:clamp(40px,6vw,64px);margin-top:14px}
+.intro h1 .cn{display:block;font-size:.6em;margin-bottom:8px}
+.intro p{color:var(--muted);max-width:640px;margin:16px 0 0;font-size:19px}
+
+section{padding:56px 0;border-bottom:1px dashed var(--line);scroll-margin-top:90px}
+section:last-child{border-bottom:0}
+.sec-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:22px}
+.sec-head h2{font-size:clamp(28px,4vw,40px)}
+.sec-head .cn{font-size:24px;color:var(--muted)}
+.lede{color:var(--muted);max-width:680px;margin:0 0 26px}
+.rules{margin:0;padding:0;list-style:none;display:grid;gap:10px;max-width:720px}
+.rules li{padding-left:30px;position:relative}
+.rules li::before{content:"";position:absolute;left:6px;top:.62em;width:10px;height:10px;border-radius:50%;background:var(--grass)}
+.rules.dont li::before{background:none;border:2px solid var(--pink);width:12px;height:12px;left:5px;top:.55em;transform:rotate(45deg);border-radius:3px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.panel{background:var(--surface);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);min-width:0}
+.panel h3{font-size:20px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.tag-do{color:var(--grass-text)}.tag-dont{color:var(--pink-text)}
+
+/* logo */
+.logo-stage{display:grid;grid-template-columns:1.3fr 1fr;gap:22px}
+.logo-big{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);display:grid;place-items:center;padding:40px;position:relative;min-height:340px}
+.logo-big img{width:min(100%,460px);animation:bob 5s ease-in-out infinite}
+.logo-big .clear{position:absolute;inset:22px 22px 40px;border:2px dashed color-mix(in srgb,var(--sky) 45%,transparent);border-radius:20px;pointer-events:none}
+.logo-big figcaption{position:absolute;left:30px;bottom:12px;font:800 12px Nunito;color:var(--sky-text)}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.logo-side{display:grid;gap:22px;grid-template-rows:auto auto}
+.lockup{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;align-items:center;gap:12px}
+.lockup img{height:64px;width:auto}
+.wm{display:block;font:400 22px/1 "ZCOOL KuaiLe";letter-spacing:.06em}
+.wm i{font-style:normal}.wm i:nth-child(1){color:var(--pink)}.wm i:nth-child(2){color:var(--grape)}.wm i:nth-child(3){color:var(--sky)}.wm i:nth-child(4),.wm i:nth-child(5){color:var(--cocoa)}
+.wm2{display:block;font:800 13px/1.2 "Baloo 2";color:var(--pink-text);margin-top:4px}.wm2 span{color:var(--muted)}
+.minis{display:flex;gap:16px;align-items:end;background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;flex-wrap:wrap}
+.minis figure{margin:0;text-align:center;font-size:12px;color:var(--muted);font-weight:700}
+.minis img{margin:0 auto 6px}
+.minis .app{border-radius:14px;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+@media (max-width:760px){.logo-stage{grid-template-columns:1fr}}
+
+/* colour */
+.swatches{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.sw{border-radius:22px;overflow:hidden;background:var(--surface);box-shadow:var(--shadow);min-width:0}
+.sw .chip{height:120px;background:var(--c);transform-origin:bottom;transition:transform .8s cubic-bezier(.2,.9,.2,1)}
+.sw .soft{height:28px;background:var(--s)}
+.sw .meta{padding:12px 14px 14px}
+.sw b{display:block;font:800 16px "Baloo 2"}
+.sw .zh{font-size:13px;color:var(--muted);font-weight:700}
+.sw .hex{display:block;font:700 12px ui-monospace,Menlo,monospace;color:var(--muted);margin-top:6px}
+.sw .txt{display:block;font-weight:800;font-size:14px;color:var(--t);margin-top:4px}
+.grow .sw .chip{transform:scaleY(.08)}
+.grow.in .sw .chip{transform:none}
+.grow.in .sw:nth-child(2) .chip{transition-delay:.08s}.grow.in .sw:nth-child(3) .chip{transition-delay:.16s}.grow.in .sw:nth-child(4) .chip{transition-delay:.24s}.grow.in .sw:nth-child(5) .chip{transition-delay:.32s}.grow.in .sw:nth-child(6) .chip{transition-delay:.4s}
+@media (max-width:860px){.swatches{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:460px){.swatches{grid-template-columns:repeat(2,1fr)}}
+.neutrals{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.neutrals span{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border-radius:99px;padding:6px 14px 6px 6px;font-weight:700;font-size:14px;box-shadow:0 2px 0 var(--line)}
+.neutrals i{width:26px;height:26px;border-radius:50%;background:var(--c);border:1px solid var(--line)}
+
+/* contrast chart */
+.contrast{margin-top:30px}
+.contrast h3{font-size:22px;margin-bottom:6px}
+.bars{display:grid;gap:10px;margin-top:16px}
+.bar{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr) 52px;gap:12px;align-items:center;font-size:14px;font-weight:700}
+.bar .sample{border-radius:10px;padding:6px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar .track{position:relative;height:14px;border-radius:9px;background:color-mix(in srgb,var(--ink) 8%,transparent)}
+.bar .fill{position:absolute;left:0;top:0;bottom:0;border-radius:9px;background:var(--grass);width:0;transition:width 1s cubic-bezier(.2,.9,.2,1)}
+.bar.bad .fill{background:var(--pink)}
+.bar .val{font:800 15px "Baloo 2";font-variant-numeric:tabular-nums;text-align:right}
+.bar.bad .val{color:var(--pink-text)}
+.bars .mark{position:absolute;top:-6px;bottom:-6px;width:2px;background:var(--ink);opacity:.5}
+.chart-note{font-size:13px;color:var(--muted);margin-top:12px}
+@media (max-width:560px){.bar{grid-template-columns:minmax(0,1fr) 46px}.bar .track{grid-column:1/-1;grid-row:2}}
+
+/* type */
+.specimen{display:grid;gap:14px}
+.spec{background:var(--surface);border-radius:22px;padding:20px 24px;box-shadow:var(--shadow);display:grid;grid-template-columns:150px minmax(0,1fr);gap:18px;align-items:center}
+.spec .k{font-size:13px;color:var(--muted);font-weight:700;line-height:1.4}
+.spec .k b{display:block;color:var(--ink);font-size:15px}
+.spec .s{min-width:0;overflow-wrap:anywhere}
+@media (max-width:620px){.spec{grid-template-columns:1fr;gap:6px}}
+
+/* shape */
+.shapes{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px}
+.shape{text-align:center;font-size:13px;font-weight:700;color:var(--muted)}
+.shape div{height:90px;background:var(--pink-soft);margin-bottom:10px;box-shadow:var(--shadow)}
+.shape b{display:block;color:var(--ink);font-size:15px}
+
+/* icons */
+.icons{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:14px}
+.icons figure{margin:0;background:var(--surface);border-radius:20px;padding:18px 8px 12px;text-align:center;box-shadow:var(--shadow);font:700 13px Nunito;color:var(--muted)}
+.icons svg{width:48px;height:48px;display:block;margin:0 auto 8px}
+.anatomy{display:grid;grid-template-columns:220px minmax(0,1fr);gap:28px;align-items:center;margin-bottom:26px}
+.anatomy svg.big{width:100%;max-width:220px;height:auto;background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow)}
+.anatomy .g{stroke:var(--sky);stroke-width:.06;stroke-dasharray:.25 .2;fill:none;opacity:.8}
+@media (max-width:620px){.anatomy{grid-template-columns:1fr}}
+
+/* components */
+.demo{display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding:24px;background:var(--bg);border-radius:20px;margin-bottom:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;font:800 17px/1 Nunito,"PingFang SC",sans-serif;text-decoration:none;padding:16px 26px;border-radius:99px;border:0;cursor:pointer;transition:transform .2s cubic-bezier(.3,1.6,.5,1)}
+.btn:hover{transform:translateY(-3px)}.btn:active{transform:translateY(3px)}
+.btn-primary{background:var(--action);color:var(--on-action);box-shadow:0 6px 0 var(--action-shadow)}
+.btn-ghost{background:var(--surface);color:var(--ink);box-shadow:0 6px 0 var(--line)}
+.btn .ico{width:22px;height:22px;--f:var(--sun)}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border-radius:99px;padding:8px 16px;font-weight:800;font-size:14px}
+.pill .ico{width:20px;height:20px}
+.fcard{background:var(--surface);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);max-width:260px}
+.fcard .tile{width:68px;height:68px;border-radius:20px;display:grid;place-items:center;margin-bottom:16px}
+.fcard .tile .ico{width:44px;height:44px}
+.fcard h3{font-size:22px}.fcard small{display:block;font:400 16px "ZCOOL KuaiLe";color:var(--muted);margin-top:4px}
+.fcard p{color:var(--muted);font-size:15px;margin:8px 0 0}
+
+/* photos */
+.photos{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:14px}
+.photos figure{margin:0;border-radius:22px;overflow:hidden;position:relative}
+.photos img{width:100%;height:100%;object-fit:cover}
+.photos figcaption{position:absolute;left:10px;bottom:10px;background:rgba(255,255,255,.92);color:#3A2117;font-weight:800;font-size:12px;padding:3px 10px;border-radius:99px}
+.photos .w2{grid-column:span 2}
+@media (max-width:640px){.photos{grid-template-columns:repeat(2,1fr)}}
+
+/* motion demo */
+.motion{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.mbox{background:var(--surface);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);min-width:0}
+.mbox h3{font-size:18px;margin-bottom:12px}
+.mstage{height:90px;border-radius:16px;background:var(--sky-soft);position:relative;overflow:hidden}
+.m-dot{position:absolute;left:18px;width:18px;height:18px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 6px color-mix(in srgb,var(--pink) 28%,transparent);animation:walk 5.4s cubic-bezier(.5,0,.2,1) infinite}
+@keyframes walk{0%,22%{top:12px}33%,55%{top:36px}66%,88%{top:60px}100%{top:12px}}
+.m-rise{position:absolute;inset:16px;border-radius:12px;background:var(--surface);animation:rise 3s cubic-bezier(.2,.8,.2,1) infinite}
+@keyframes rise{0%{opacity:0;transform:translateY(24px)}40%,100%{opacity:1;transform:none}}
+.m-bob{position:absolute;left:50%;top:50%;width:70px;margin:-26px 0 0 -35px;animation:bob 5s ease-in-out infinite}
+.mbox p{font-size:14px;color:var(--muted);margin:10px 0 0}
+
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.contact div{background:var(--surface);border-radius:20px;padding:18px 20px;box-shadow:var(--shadow)}
+.contact dt{font:800 12px Nunito;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:6px}
+.contact dd{margin:6px 0 0;font-weight:800}
+
+footer{padding:30px 0 50px;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+
+.reveal{transition:opacity .7s,transform .7s cubic-bezier(.2,.8,.2,1)}
+.js .reveal:not(.in){opacity:0;transform:translateY(20px)}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal:not(.in){opacity:1;transform:none}
+  .grow .sw .chip{transform:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <!--icons:start-->
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" x="3" y="5" width="18" height="16" rx="2.125"/><path fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" d="M3 9.167 H21 M9.167 3 V7 M14.833 3 V7"/><circle fill="currentColor" fill-opacity=".5" cx="7.167" cy="14.833" r="1.313"/><circle fill="currentColor" fill-opacity=".5" cx="12" cy="14.833" r="1.313"/><circle fill="var(--f, currentColor)" cx="16.833" cy="14.833" r="2.125"/></symbol>
+  <symbol id="i-speech" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" d="M6.438 4 H17.562 A3.438 3.438 0 0 1 21 7.438 V13.062 A3.438 3.438 0 0 1 17.562 16.5 H11.167 L7.167 20.5 V16.5 H6.438 A3.438 3.438 0 0 1 3 13.062 V7.438 A3.438 3.438 0 0 1 6.438 4 Z"/><circle fill="currentColor" fill-opacity=".5" cx="7.438" cy="10.25" r="1.313"/><circle fill="currentColor" fill-opacity=".5" cx="16.562" cy="10.25" r="1.313"/><circle fill="var(--f, currentColor)" cx="12" cy="10.25" r="2.125"/></symbol>
+  <symbol id="i-palette" viewBox="0 0 24 24"><circle fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" cx="12" cy="12" r="9"/><circle fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" cx="15.333" cy="15.333" r="2.125"/><circle fill="currentColor" fill-opacity=".5" cx="6.773" cy="10.098" r="1.713"/><circle fill="currentColor" fill-opacity=".5" cx="10.098" cy="6.773" r="1.713"/><circle fill="currentColor" fill-opacity=".5" cx="14.781" cy="7.183" r="1.713"/><circle fill="var(--f, currentColor)" cx="7.444" cy="15.19" r="2.125"/></symbol>
+  <symbol id="i-note" viewBox="0 0 24 24"><circle fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" cx="7.5" cy="17.5" r="3.438"/><circle fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" cx="16.5" cy="15.5" r="3.438"/><path fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" d="M10.938 17.5 V5.5 L19.938 3.5 V15.5 M10.938 8.938 L19.938 6.938"/><circle fill="var(--f, currentColor)" cx="7.5" cy="17.5" r="2.125"/></symbol>
+  <symbol id="i-lantern" viewBox="0 0 24 24"><rect fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" x="5.5" y="6.5" width="13" height="11" rx="3.438"/><path fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" d="M9.167 6.5 V4.5 H14.833 V6.5 M12 4.5 V2.5 M12 17.5 V21 M9.167 17.5 V19 M14.833 17.5 V19 M12 6.5 V17.5"/><path fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" d="M9.588 8.82 A6 6 0 0 1 9.588 15.18 M14.412 15.18 A6 6 0 0 1 14.412 8.82"/><circle fill="var(--f, currentColor)" cx="12" cy="12" r="2.125"/></symbol>
+  <symbol id="i-tree" viewBox="0 0 24 24"><circle fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" cx="12" cy="9.167" r="5.562"/><path fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" d="M12 14.729 V21 M5 21 H19 M12 15.833 L15.438 13.333"/><circle fill="var(--f, currentColor)" cx="14.431" cy="6.736" r="2.125"/></symbol>
+  <symbol id="i-blocks" viewBox="0 0 24 24"><rect fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" x="3" y="13" width="8" height="8" rx="1.313"/><rect fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" x="13" y="13" width="8" height="8" rx="1.313"/><rect fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" x="8" y="4" width="8" height="8" rx="1.313"/><circle fill="currentColor" fill-opacity=".5" cx="7" cy="17" r="1.313"/><circle fill="currentColor" fill-opacity=".5" cx="17" cy="17" r="1.313"/><circle fill="var(--f, currentColor)" cx="12" cy="8" r="2.125"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" d="M6.131 11.431 A3.438 3.438 0 1 1 12 9 A3.438 3.438 0 1 1 17.869 11.431 L12 17.299 Z"/><circle fill="var(--f, currentColor)" cx="12" cy="11.8" r="2.125"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" cx="12" cy="12" r="3.438"/><path fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" d="M17.562 12 L21 12 M15.933 15.933 L18.364 18.364 M12 17.562 L12 21 M8.067 15.933 L5.636 18.364 M6.438 12 L3 12 M8.067 8.067 L5.636 5.636 M12 6.438 L12 3 M15.933 8.067 L18.364 5.636"/><circle fill="var(--f, currentColor)" cx="12" cy="12" r="2.125"/></symbol>
+  <symbol id="i-apple" viewBox="0 0 24 24"><circle fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" cx="12" cy="13.5" r="5.562"/><path fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" d="M12 7.938 V4.5"/><path fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" d="M12 6 A3.438 3.438 0 0 1 16 4 A3.438 3.438 0 0 1 12 6"/><circle fill="var(--f, currentColor)" cx="9.569" cy="11.069" r="2.125"/></symbol>
+  <symbol id="i-bowl" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" d="M3 12 H21 A9 9 0 0 1 3 12 Z"/><path fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" d="M6.438 12 A5.562 5.562 0 0 1 17.562 12"/><path fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" d="M14 3 L19.5 9 M16 2.5 L21 8"/><circle fill="var(--f, currentColor)" cx="9.562" cy="9.062" r="2.125"/></symbol>
+  <symbol id="i-house" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" d="M3 11.5 L12 3.5 L21 11.5"/><rect fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" x="5.5" y="9.5" width="13" height="11.5" rx="1.313"/><rect fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" x="9.167" y="14.5" width="4.333" height="6.5" rx="1.313"/><circle fill="var(--f, currentColor)" cx="15.833" cy="13.5" r="2.125"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" d="M12 7.5 A14.562 14.562 0 0 0 3 5 V18 A14.562 14.562 0 0 1 12 20.5 Z M12 7.5 A14.562 14.562 0 0 1 21 5 V18 A14.562 14.562 0 0 0 12 20.5 Z M12 7.5 V20.5"/><circle fill="var(--f, currentColor)" cx="16.333" cy="12.5" r="2.125"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" d="M7.183 12.448 A5.562 5.562 0 1 1 16.817 12.448 L12 21 Z"/><circle fill="var(--f, currentColor)" cx="12" cy="9.667" r="2.125"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" x="7" y="2.5" width="10" height="19" rx="2.125"/><path fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" d="M10.167 5 H13.833"/><circle fill="var(--f, currentColor)" cx="12" cy="18.5" r="1.613"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" cx="12" cy="12" r="9"/><path fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" d="M12 12 V6.438 M12 12 H15.438"/><circle fill="var(--f, currentColor)" cx="12" cy="12" r="2.125"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" d="M13.152 3.074 A9 9 0 1 0 20.926 10.848 A5.562 5.562 0 0 1 13.152 3.074 Z"/><circle fill="var(--f, currentColor)" cx="17.751" cy="6.249" r="2.125"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><circle fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" cx="12" cy="11.5" r="9"/><path fill="none" stroke="currentColor" stroke-opacity=".72" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" d="M6.42 18.52 L6.5 21 L10.2 20.32 M7.5 13.5 L10.5 10 L13 12.5 L16.5 9.5"/><circle fill="var(--f, currentColor)" cx="16.5" cy="9.5" r="1.613"/></symbol>
+  <!--icons:end-->
+</svg>
+<script>document.documentElement.classList.add('js')</script>
+
+<header>
+  <nav class="wrap nav" aria-label="Main">
+    <a class="brand" href="../" aria-label="回到小乐儿园地首页">
+      <img src="../assets/logo-sm.png" alt="" width="360" height="242">
+      <span><b>品牌规范</b><small>BRAND GUIDELINES</small></span>
+    </a>
+    <div class="nav-end">
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="切换深色 / 浅色">
+        <svg class="ico i-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        <svg class="ico i-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+      </button>
+      <a class="back" href="../">← <span>回首页</span></a>
+    </div>
+  </nav>
+</header>
+
+<div class="wrap layout">
+  <aside class="toc" aria-label="目录">
+    <ol>
+      <li><a href="#logo">Logo</a></li>
+      <li><a href="#voice">名称与语气</a></li>
+      <li><a href="#colour">颜色</a></li>
+      <li><a href="#type">字体</a></li>
+      <li><a href="#shape">形状与间距</a></li>
+      <li><a href="#icons">图标</a></li>
+      <li><a href="#components">组件</a></li>
+      <li><a href="#photos">照片</a></li>
+      <li><a href="#motion">动效</a></li>
+      <li><a href="#contact">联系资料</a></li>
+    </ol>
+  </aside>
+
+  <main>
+    <div class="intro">
+      <span class="eyebrow">Brand guidelines · 2026</span>
+      <h1><span class="cn">小乐儿园地 品牌规范</span>Kids World brand guidelines</h1>
+      <p>这里的每一样东西都从 logo 来:六个颜色取自 logo,标题字体呼应 logo 圆滚滚的字。拿不准的时候,看看 logo,问问新东西放在它旁边合不合适。</p>
+    </div>
+
+    <section id="logo">
+      <div class="sec-head"><h2>Logo</h2><span class="cn">标志</span></div>
+      <p class="lede">两个挥手的小朋友站在草地上,周围开满小花。一律使用完整 logo,自带白色贴纸描边,放在浅色、深色底上都不用加框。</p>
+      <div class="logo-stage reveal">
+        <figure class="logo-big" style="margin:0">
+          <div class="clear" aria-hidden="true"></div>
+          <img src="../assets/logo-960.png" width="960" height="643" alt="小乐儿园地 Kids World Kindergarten 完整 logo">
+          <figcaption>虚线 = 最小留白,约一朵小花的高度</figcaption>
+        </figure>
+        <div class="logo-side">
+          <div class="lockup">
+            <img src="../assets/logo-sm.png" alt="" width="360" height="242">
+            <span><span class="wm"><i>小</i><i>乐</i><i>儿</i><i>园</i><i>地</i></span><span class="wm2">Kids World <span>Kindergarten</span></span></span>
+          </div>
+          <div class="minis">
+            <figure><img src="../assets/favicon.png" width="48" height="48" alt="网页标签图标">网页标签</figure>
+            <figure><img class="app" src="../assets/apple-touch-icon.png" width="72" height="72" alt="手机主屏图标">手机主屏</figure>
+          </div>
+        </div>
+      </div>
+      <div class="cols" style="margin-top:22px">
+        <div class="panel reveal"><h3 class="tag-do">要这样</h3><ul class="rules">
+          <li>永远用完整 logo:小朋友、草地、小花、中英文字一个都不能少。</li>
+          <li>菜单栏用「logo + 彩色字」组合:小 玫红、乐 紫、儿 天蓝、园地 巧克力棕。</li>
+          <li>最小尺寸:屏幕上 88px 高(菜单栏组合 64px),印刷 30mm 宽。</li>
+        </ul></div>
+        <div class="panel reveal"><h3 class="tag-dont">不要这样</h3><ul class="rules dont">
+          <li>裁掉下半部的字,或只用两个小朋友。</li>
+          <li>改颜色、拉伸、旋转、加阴影。</li>
+          <li>直接压在照片上。</li>
+        </ul></div>
+      </div>
+    </section>
+
+    <section id="voice">
+      <div class="sec-head"><h2>Name &amp; voice</h2><span class="cn">名称与语气</span></div>
+      <div class="cols">
+        <div class="panel reveal"><h3>名称</h3><ul class="rules">
+          <li>全名写作 <b>小乐儿园地 Kids World Kindergarten</b>,中文在前。</li>
+          <li>简短处可只写「小乐儿园地」或「Kids World」。</li>
+          <li>不写成 KidsWorld(连写)或 Kids' World。</li>
+        </ul></div>
+        <div class="panel reveal"><h3>语气</h3><ul class="rules">
+          <li>像老师在校门口跟家长说话:温暖、直白、句子短。</li>
+          <li>只说园方能证实的事:超过 20 年、3–6 岁、真实地址电话。不编数字、奖项、家长评价。</li>
+          <li>按钮写清楚会发生什么:「预约参观 Book a visit」。</li>
+          <li>介面里不用 emoji,用下面的图标。</li>
+        </ul></div>
+      </div>
+    </section>
+
+    <section id="colour">
+      <div class="sec-head"><h2>Colour</h2><span class="cn">颜色</span></div>
+      <p class="lede">六个颜色都取自 logo。每个颜色有三个用途:大块填色用原色,浅底用 soft,<b>小字一律用深一点的「文字色」</b>,因为 logo 的颜色太亮,直接当小字不清楚。</p>
+      <div class="swatches grow reveal" id="swatches">
+        <div class="sw" style="--c:var(--pink);--s:var(--pink-soft);--t:var(--pink-text)"><div class="chip"></div><div class="soft"></div><div class="meta"><b>Pink</b><span class="zh">「小」「Kids World」</span><span class="hex">#E8197A</span><span class="txt">文字色 Aa</span></div></div>
+        <div class="sw" style="--c:var(--grape);--s:var(--grape-soft);--t:var(--grape-text)"><div class="chip"></div><div class="soft"></div><div class="meta"><b>Grape</b><span class="zh">「乐」</span><span class="hex">#8B45D6</span><span class="txt">文字色 Aa</span></div></div>
+        <div class="sw" style="--c:var(--sky);--s:var(--sky-soft);--t:var(--sky-text)"><div class="chip"></div><div class="soft"></div><div class="meta"><b>Sky</b><span class="zh">「儿」</span><span class="hex">#1E9FE6</span><span class="txt">文字色 Aa</span></div></div>
+        <div class="sw" style="--c:var(--cocoa);--s:var(--sun-soft);--t:var(--cocoa)"><div class="chip"></div><div class="soft" style="background:var(--cocoa);opacity:.25"></div><div class="meta"><b>Cocoa</b><span class="zh">「园地」</span><span class="hex">#5A2E1A</span><span class="txt">只用于字标</span></div></div>
+        <div class="sw" style="--c:var(--grass);--s:var(--grass-soft);--t:var(--grass-text)"><div class="chip"></div><div class="soft"></div><div class="meta"><b>Grass</b><span class="zh">草地</span><span class="hex">#5DB82E</span><span class="txt">文字色 Aa</span></div></div>
+        <div class="sw" style="--c:var(--sun);--s:var(--sun-soft);--t:var(--sun-text)"><div class="chip"></div><div class="soft"></div><div class="meta"><b>Sun</b><span class="zh">花心</span><span class="hex">#FFC22E</span><span class="txt">文字色 Aa</span></div></div>
+      </div>
+      <div class="neutrals">
+        <span><i style="--c:var(--bg)"></i>bg 页面底</span>
+        <span><i style="--c:var(--surface)"></i>surface 卡片</span>
+        <span><i style="--c:var(--ink)"></i>ink 正文</span>
+        <span><i style="--c:var(--muted)"></i>muted 次要文字</span>
+        <span><i style="--c:var(--action)"></i>action 主按钮</span>
+      </div>
+      <ul class="rules" style="margin-top:22px">
+        <li>玫红打头:每一屏最先看到的颜色应该是玫红,再配一两个辅助色。一张卡片里不要六色全上。</li>
+        <li>页面底是带粉的奶油色 <code>bg</code>,卡片 <code>surface</code>,正文 <code>ink</code>。深色主题是柔和的紫黑夜色,不是纯黑。</li>
+        <li>主按钮用 <code>action</code>:浅色主题深玫红配白字,深色主题浅粉配深色字。黄色底上的字一律用深棕。</li>
+      </ul>
+
+      <div class="contrast reveal" id="contrast" aria-labelledby="ctitle">
+        <h3 id="ctitle">文字够不够清楚:对比度</h3>
+        <p class="lede" style="margin:0">绿色长条 = 规范里的文字组合,全部超过 4.5:1 的标准线。玫红长条 = 不要这样用(把 logo 原色直接当小字)。会跟着当前的浅色 / 深色主题变。</p>
+        <div class="bars" id="bars"></div>
+        <p class="chart-note">按 WCAG 2 公式用色值算出;竖线 = 4.5:1(正文最低标准)。长条比例尺 0–16:1。</p>
+      </div>
+    </section>
+
+    <section id="type">
+      <div class="sec-head"><h2>Type</h2><span class="cn">字体</span></div>
+      <p class="lede">三款 Google 字体,都是圆圆的,呼应 logo 鼓鼓的字。中文标题在上、英文在下;每页只有一个大标题。</p>
+      <div class="specimen">
+        <div class="spec reveal"><div class="k"><b>Baloo 2 · 800</b>英文标题</div><div class="s" style="font:800 clamp(30px,5vw,52px)/1.1 'Baloo 2'">Where little ones <span style="color:var(--pink);background:linear-gradient(transparent 70%,var(--sun) 70%)">learn by playing</span></div></div>
+        <div class="spec reveal"><div class="k"><b>站酷快乐体</b>中文标题、字标</div><div class="s" style="font:400 clamp(26px,4vw,40px)/1.3 'ZCOOL KuaiLe'">在游戏中学习,在关爱中成长</div></div>
+        <div class="spec reveal"><div class="k"><b>Nunito · 400 / 800</b>正文、按钮,17px</div><div class="s">小乐儿园地在亚依淡陪伴孩子已经超过 20 年。For over 20 years, Kids World has offered holistic early childhood development for ages 3–6.</div></div>
+        <div class="spec reveal"><div class="k"><b>Eyebrow · 14px</b>唯一用大写的地方</div><div class="s"><span class="eyebrow" style="background:var(--grape-soft);color:var(--grape-text)">About us · 关于我们</span></div></div>
+      </div>
+    </section>
+
+    <section id="shape">
+      <div class="sec-head"><h2>Shape &amp; space</h2><span class="cn">形状与间距</span></div>
+      <p class="lede">圆的、软的、像积木。凸起的东西下面有一层实心的「台阶」阴影,按钮按下去会往下沉。</p>
+      <div class="shapes">
+        <div class="shape reveal"><div style="border-radius:22px"></div><b>22px</b>照片、作息卡</div>
+        <div class="shape reveal"><div style="border-radius:28px"></div><b>28px</b>特色卡、分班卡</div>
+        <div class="shape reveal"><div style="border-radius:40px"></div><b>40px</b>联系资料大块</div>
+        <div class="shape reveal"><div style="border-radius:99px;height:56px;margin-top:34px"></div><b>胶囊</b>按钮、标签、图说</div>
+      </div>
+      <ul class="rules" style="margin-top:24px">
+        <li>每一节上下留 96px,标题到内容 52px,卡片之间 22px,手机两边至少 16px。</li>
+        <li>节与节之间 <code>bg</code> 与 <code>surface</code> 交替,作息那一节用 <code>sky-soft</code>。</li>
+      </ul>
+    </section>
+
+    <section id="icons">
+      <div class="sec-head"><h2>Icons</h2><span class="cn">图标</span></div>
+      <div class="anatomy reveal">
+        <svg class="big" viewBox="-1 -1 26 26" role="img" aria-label="图标构造:24 格,黄金辅助线,1px 细线加一个彩色焦点">
+          <path class="g" d="M9.167 -1 V25 M14.833 -1 V25 M-1 9.167 H25 M-1 14.833 H25"/>
+          <use href="#i-house" width="24" height="24" style="--f:var(--pink);color:var(--ink)"/>
+        </svg>
+        <ul class="rules">
+          <li>24 格画布,蓝色虚线是黄金辅助线 G1 = 24/φ²、G2 = 24/φ。</li>
+          <li>所有半径只取 R(k) = 9·φ⁻ᵏ,只用直线和圆弧。</li>
+          <li>1px 细线(跟文字同色、淡一层),只有一个彩色焦点;焦点颜色跟所在区块走。</li>
+          <li>尺寸:标签里 20px、作息 30px、卡片 44px。新图标照同样规则画,不用 emoji 代替。</li>
+        </ul>
+      </div>
+      <div class="icons" id="iconGrid"></div>
+    </section>
+
+    <section id="components">
+      <div class="sec-head"><h2>Components</h2><span class="cn">组件</span></div>
+      <div class="demo reveal">
+        <a class="btn btn-primary" href="../#contact"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg>预约参观 Book a visit</a>
+        <a class="btn btn-ghost" href="../#programmes">看课程 Classes</a>
+      </div>
+      <div class="demo reveal">
+        <span class="eyebrow">3–6 岁 · 20+ 年经验</span>
+        <span class="eyebrow" style="background:var(--sky-soft);color:var(--sky-text)">Programmes</span>
+        <span class="eyebrow" style="background:var(--grass-soft);color:var(--grass-text)">How to enrol</span>
+        <span class="pill" style="--f:var(--sky)"><svg class="ico" aria-hidden="true"><use href="#i-speech"/></svg>双语启蒙</span>
+        <span class="pill" style="--f:var(--grass)"><svg class="ico" aria-hidden="true"><use href="#i-tree"/></svg>户外活动</span>
+      </div>
+      <div class="demo reveal">
+        <article class="fcard"><div class="tile" style="background:var(--sun-soft);--f:#E8A200"><svg class="ico" aria-hidden="true"><use href="#i-blocks"/></svg></div><h3>Learn through play<small>游戏化学习</small></h3><p>动手做、动脑想——把好奇心变成真本领。</p></article>
+        <article class="fcard"><div class="tile" style="background:var(--pink-soft)"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></div><h3>Caring teachers<small>用心的老师</small></h3><p>受过培训的老师,认得每个孩子的个性。</p></article>
+      </div>
+      <ul class="rules">
+        <li>主按钮每一屏只放一个,给家长最该做的那件事。标签中文在前。</li>
+        <li>小标签(eyebrow)一定是「浅底 + 同色文字色」,不用 logo 原色当字。</li>
+        <li>分班卡一班一色:幼幼班 玫红、小班 紫、大班 天蓝。</li>
+      </ul>
+    </section>
+
+    <section id="photos">
+      <div class="sec-head"><h2>Photography</h2><span class="cn">照片</span></div>
+      <div class="photos reveal">
+        <figure class="w2"><img src="../assets/photos/lanterns.jpg" alt="中秋节孩子们提灯笼" loading="lazy"><figcaption>中秋提灯笼</figcaption></figure>
+        <figure><img src="../assets/photos/cooking.jpg" alt="孩子在搅拌食材" loading="lazy"><figcaption>小厨师</figcaption></figure>
+        <figure><img src="../assets/photos/playground.jpg" alt="孩子在游乐场" loading="lazy"><figcaption>户外活动</figcaption></figure>
+      </div>
+      <ul class="rules" style="margin-top:22px">
+        <li>只用园所自己的真实照片:节日、美术、厨艺、游乐场、毕业、校门口。不用图库照片。</li>
+        <li>明亮、自然,孩子在做事而不是摆姿势。圆角 22px,左下角白色小胶囊写图说,中文在前。</li>
+        <li>孩子的照片放上网站或社媒前,先取得家长同意。</li>
+      </ul>
+    </section>
+
+    <section id="motion">
+      <div class="sec-head"><h2>Motion</h2><span class="cn">动效</span></div>
+      <div class="motion">
+        <div class="mbox reveal"><h3>轻轻浮动</h3><div class="mstage" style="background:var(--pink-soft)"><img class="m-bob" src="../assets/logo-sm.png" alt="" width="360" height="242"></div><p>首屏 logo 每 5 秒上下浮动几个像素。</p></div>
+        <div class="mbox reveal"><h3>滑入出现</h3><div class="mstage" style="background:var(--grape-soft)"><div class="m-rise"></div></div><p>每一块滚进画面时上移 24px 并淡入。</p></div>
+        <div class="mbox reveal"><h3>一站一站走</h3><div class="mstage"><div class="m-dot"></div></div><p>作息里的小圆点按时间往下走;报名四步依次打勾。</p></div>
+      </div>
+      <ul class="rules" style="margin-top:22px">
+        <li>慢、轻,只在看得到时播放;系统开了「减少动效」就直接显示最后的样子。</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <div class="sec-head"><h2>Contact details</h2><span class="cn">联系资料</span></div>
+      <p class="lede">所有对外的地方(网站、传单、社媒、名片)统一用这一份。</p>
+      <dl class="contact" style="margin:0">
+        <div><dt><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>地址</dt><dd>190–190A, Jalan Boundary, 11500 Ayer Itam, Pulau Pinang</dd></div>
+        <div><dt><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>电话</dt><dd>04-827 5302<br><span style="font-weight:700;color:var(--muted)">Ms. Cheang / Ms. Tan</span></dd></div>
+        <div><dt><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Facebook</dt><dd>facebook.com/KidsWorldkindergarten</dd></div>
+        <div><dt><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>招收</dt><dd>3–6 岁 · 超过 20 年经验</dd></div>
+      </dl>
+    </section>
+  </main>
+</div>
+
+<footer>© <span id="yr"></span> 小乐儿园地 Kids World Kindergarten · <a href="../">回首页</a></footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const root=document.documentElement;
+// theme toggle (same storage key as the homepage)
+(()=>{const btn=document.getElementById('themeBtn'),meta=document.querySelector('meta[name=theme-color]');
+ const paint=()=>{const d=root.dataset.theme==='dark';btn.setAttribute('aria-pressed',d);btn.title=d?'切换到浅色':'切换到深色';meta.content=d?'#1D1420':'#FFF7FA';drawBars()};
+ btn.addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('kw-theme',root.dataset.theme)}catch(e){}paint()});
+ matchMedia('(prefers-color-scheme: dark)').addEventListener('change',e=>{let t=null;try{t=localStorage.getItem('kw-theme')}catch(_){}if(!t){root.dataset.theme=e.matches?'dark':'light';paint()}});
+ window.addEventListener('DOMContentLoaded',paint);})();
+
+// icon grid from the sprite
+(()=>{const g=document.getElementById('iconGrid');
+ const names={calendar:'日历',speech:'对话',palette:'调色盘',note:'音符',lantern:'灯笼',tree:'树',blocks:'积木',heart:'心',sun:'太阳',apple:'苹果',bowl:'饭碗',house:'房子',book:'书',pin:'定位',phone:'电话',clock:'钟',chat:'私讯',moon:'月亮'};
+ g.innerHTML=Object.entries(names).map(([k,v])=>`<figure><svg aria-hidden="true"><use href="#i-${k}"/></svg>${v}<br><code style="background:none;padding:0">${k}</code></figure>`).join('');})();
+
+// contrast bars: WCAG 2 ratios computed from the live token values of the current theme
+function lum(hex){const c=hex.replace('#','').match(/../g).map(x=>parseInt(x,16)/255).map(x=>x<=.03928?x/12.92:((x+.055)/1.055)**2.4);return .2126*c[0]+.7152*c[1]+.0722*c[2]}
+function ratio(a,b){const x=lum(a),y=lum(b);return (Math.max(x,y)+.05)/(Math.min(x,y)+.05)}
+function tok(n){return getComputedStyle(root).getPropertyValue('--'+n).trim()}
+let barsShown=false;
+function drawBars(){
+  const pairs=[['正文 ink','ink','bg'],['次要 muted','muted','bg'],['玫红文字色','pink-text','pink-soft'],['紫 文字色','grape-text','grape-soft'],['天蓝文字色','sky-text','sky-soft'],['草绿文字色','grass-text','grass-soft'],['花黄文字色','sun-text','sun-soft'],['主按钮','on-action','action'],
+               ['✕ 玫红原色当字','pink','pink-soft',1],['✕ 天蓝原色当字','sky','sky-soft',1],['✕ 草绿原色当字','grass','grass-soft',1]];
+  const el=document.getElementById('bars'),max=16;
+  el.innerHTML=pairs.map(([label,fg,bg,bad])=>{const r=ratio(tok(fg),tok(bg));return `<div class="bar${bad?' bad':''}" role="img" aria-label="${label} 对比度 ${r.toFixed(1)} 比 1"><span class="sample" style="color:var(--${fg});background:var(--${bg})">${label}</span><span class="track"><span class="fill" data-w="${Math.min(r/max,1)*100}"></span><span class="mark" style="left:${4.5/max*100}%"></span></span><span class="val">${r.toFixed(1)}</span></div>`}).join('');
+  if(barsShown||reduce)fillBars();
+}
+function fillBars(){document.querySelectorAll('#bars .fill').forEach(f=>f.style.width=f.dataset.w+'%')}
+
+// reveal + chart growth only when on screen
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('in');if(e.target.id==='contrast'){barsShown=true;requestAnimationFrame(fillBars)}io.unobserve(e.target)}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// table of contents: highlight the section on screen
+(()=>{const links=[...document.querySelectorAll('.toc a')];
+ const obs=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-40% 0px -55% 0px'});
+ document.querySelectorAll('main section').forEach(s=>obs.observe(s));})();
+</script>
+</body>
+</html>
