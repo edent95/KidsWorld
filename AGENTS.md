@@ -14,7 +14,7 @@ index.html / design/index.html ──(PR 合并进 main)──▶ GitHub Pages �
 
 1. **合并进 `main` 就是上线。** GitHub Pages 从 `main` 根目录发布(`CNAME` = kidsworld-penang.com)。PR 的 `ci` 检查全过后面板 / GitHub 会自动合并,也就是自动上线 —— 不要把半成品推进 PR。
 2. **这是公开仓库。** 不放家长资料、未获同意的孩子照片、内部价格;CI 跑在 GitHub 托管的 ubuntu,不上 M1 自托管 runner(公开仓库任何人都能开 fork PR)。
-3. **网站上的事实要能证实。** 地址 190–190A Jalan Boundary, 11500 Ayer Itam、电话 04-827 5302、3–6 岁、超过 20 年 —— 这些是园方给的。课程分班与一天作息目前是示意(页面上标了),不要当成真的再往外抄。
+3. **网站上的事实要能证实。** 地址 190–190A Jalan Boundary, 11500 Ayer Itam、电话 011-1087 5302、3–6 岁、超过 20 年 —— 这些是园方给的。课程分班与一天作息目前是示意(页面上标了),不要当成真的再往外抄。
 
 ## 1. 开学礼包:必读顺序
 
